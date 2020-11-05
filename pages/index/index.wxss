@@ -1,0 +1,273 @@
+/**index.wxss**/
+.container {
+  position: relative;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+  position: relative;
+}
+
+.avatar-upload {
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 60rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  box-shadow: 18rpx 18rpx 30rpx #d1d9e6, -18rpx -18rpx 30rpx #fff;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  margin-left: -30rpx;
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.6s;
+  background-color: var(--themeColor);
+}
+
+.avatar-upload.active {
+  z-index: 1;
+  opacity: 0;
+}
+
+.avatar-upload:after {
+  border: 0;
+}
+
+.avatar-upload.icon-02 {
+  color: #cbd3de;
+  font-size: 28rpx;
+}
+
+.avatar-img {
+  height: 60rpx;
+  width: 60rpx;
+  transition: all .6s;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.avatar-img.active {
+  height: 120rpx;
+  width: 120rpx;
+  opacity: 1;
+  z-index: 2;
+}
+
+.recname {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+  position: relative;
+}
+
+.recname-btn {
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 60rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  box-shadow: 18rpx 18rpx 30rpx #d1d9e6, -18rpx -18rpx 30rpx #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -30rpx;
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.6s;
+}
+
+.recname-btn.active {
+  z-index: 1;
+  opacity: 0;
+}
+
+.recname-btn:after {
+  border: 0;
+}
+
+.recname-btn.icon-wenzi {
+  color: #cbd3de;
+  font-size: 28rpx;
+}
+
+.recname-input {
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 60rpx;
+  border-radius: 30rpx;
+  opacity: 0;
+  z-index: 1;
+  border: 0;
+  outline: 0;
+  font-size: 32rpx;
+  text-align: center;
+  background-color: var(--themeColor);
+  text-shadow: 2rpx 2rpx 0 #FFF;
+  box-shadow: inset 4rpx 4rpx 5rpx #BABECC, inset -10rpx -10rpx 20rpx #FFF;
+  box-sizing: border-box;
+  transition: all .6s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.recname-input:focus {
+  box-shadow: inset 2rpx 2rpx 4rpx #BABECC, inset -2rpx -2rpx 4rpx #FFF;
+}
+
+.recname-input.active {
+  width: 600rpx;
+  opacity: 1;
+  z-index: 2;
+  color: #808080;
+}
+
+.upload {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+
+.upload-item {
+  font-size: 64rpx;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  justify-content: center;
+  text-align: center;
+  margin: 0 40rpx;
+  border-radius: 20rpx;
+  transition: all .5s;
+  box-shadow: 18rpx 18rpx 30rpx #d1d9e6, -18rpx -18rpx 30rpx #fff;
+}
+
+.upload-item.icon-qq {
+  color: #cbd3de;
+}
+
+.upload-item.icon-qq.active {
+  color: #4797D2;
+}
+
+.upload-item.icon-weixin {
+  color: #cbd3de;
+}
+
+.upload-item.icon-weixin.active {
+  color: #3CB035;
+}
+
+.upload-item.icon-27 {
+  color: #cbd3de;
+}
+
+.upload-item.icon-27.active {
+  color: #00AAEE;
+}
+
+.custom-swiper {
+  margin-top: 30rpx;
+}
+
+.btn-generate {
+  margin: 30rpx auto 0;
+  text-align: center;
+  box-shadow: 18rpx 18rpx 30rpx #d1d9e6, -18rpx -18rpx 30rpx #fff;
+  width: 500rpx;
+  border-radius: 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #b9bfcf;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-generate:before {
+  content: "";
+  background-image: linear-gradient(to right, #1057ff, #03f4ff);
+  width: 500rpx;
+  height: 80rpx;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  transition: all .6s;
+  z-index: -1;
+}
+
+.btn-generate .icon-hecheng {
+  margin-right: 16rpx;
+  font-size: 32rpx;
+}
+
+.btn-generate.active {
+  color: #fff;
+}
+
+.btn-generate.active:before {
+  left: 0;
+}
+
+.result-img {
+  position: fixed;
+  left: -2000px;
+  top: -2000px;
+}
+
+.mini-img {
+  width: 675rpx;
+  height: 900rpx;
+}
+
+.tips {
+  border-radius: 50rpx;
+  background: #e8f2fb;
+  box-shadow: 30rpx 30rpx 60rpx #a2a9b0, -30rpx -30rpx 60rpx #ffffff;
+  width: 600rpx;
+  padding: 40rpx;
+  font-size: 28rpx;
+  margin: 60rpx auto 40rpx;
+  color: #b9bfcf;
+}
+
+.tips-name {
+  font-size: 60rpx;
+  color: #2d8795;
+}
+
+.tips-item {
+  line-height: 40rpx;
+  position: relative;
+  padding-left: 35rpx;
+  margin-left: 30rpx;
+}
+
+.tips-item:before {
+  content: "";
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background-color: #6c79ea;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -5rpx;
+}
+
+.tips-item:nth-child(n+2) {
+  margin-top: 16rpx;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+van-transition {
+  position: fixed;
+  z-index: 100;
+}

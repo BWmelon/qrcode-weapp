@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="upload">
+		<view
+		 class="upload-item iconfont icon-qq {{params.qqUrl !== '' ? 'active' : ''}}"
+		 bindtap="scanQrcode"
+		 data-type="qqUrl"
+		 bindlongpress="cancelType"
+		></view>
+		<view
+		 class="upload-item iconfont icon-weixin {{params.wechatUrl !== '' ? 'active' : ''}}"
+		 bindtap="scanQrcode"
+		 data-type="wechatUrl"
+		 bindlongpress="cancelType"
+		></view>
+		<view
+		 class="upload-item iconfont icon-27 {{params.aliUrl !== '' ? 'active' : ''}}"
+		 bindtap="scanQrcode"
+		 data-type="aliUrl"
+		 bindlongpress="cancelType"
+		></view>
+	</view>
+	<view>
+		<view class="avatar">
+			<button
+			 class="avatar-upload iconfont icon-02 {{!params.img?'': 'active'}}"
+			 open-type="getUserInfo"
+			 bindgetuserinfo="getUserInfo"
+			></button>
+			<image
+			 class="avatar-img {{params.img?'active': ''}}"
+			 src="{{params.img}}"
+			 bindlongpress="cancelUploadAvatar"
+			></image>
+		</view>
+		<view class="recname">
+			<view class="recname-btn iconfont icon-wenzi {{!isEdit?'': 'active'}}" bindtap="setEdit"></view>
+			<input
+			 focus="{{isAnimationFinish}}"
+			 placeholder="{{isAnimationFinish ? '收款名称 长按取消': ''}}"
+			 class="recname-input {{isEdit?'active': ''}}"
+			 bindlongtap="cancelEdit"
+			 bindblur="canCancelEdit"
+			></input>
+		</view>
+	</view>
+	<custom-swiper
+	 class="custom-swiper"
+	 imgUrls="{{carouselImgs}}"
+	 bindgetModelName="bindgetModelName"
+	/>
+	<view class="btn-generate {{!params.qqUrl&&!params.wechatUrl&&!params.aliUrl ? '': 'active'}}" bindtap="generate">
+		<text class="iconfont icon-hecheng"></text>
+		Combine
+	</view>
+	<view class="tips">
+		<view class="tips-name">Tips</view>
+		<view class="tips-item">点击平台图标上传收款码，上传后可长按图标取消相应收款方式</view>
+		<view class="tips-item">点击头像图标上传微信头像，头像将在收款时显示，长按头像图标取消使用头像</view>
+		<view class="tips-item">点击文本图标设置收款名称，名称将在收款时显示。长按文本框取消使用收款名称，取消则默认显示"商户收款码"</view>
+		<view class="tips-item">上传微信头像和保存收款码时需要您的授权</view>
+	</view>
+	<van-overlay show="{{ show }}" bind:click="onClickHide">
+		<view class="wrapper">
+			<image
+			 model="widthFix"
+			 class="mini-img"
+			 src="{{miniImgUrl}}"
+			 bindlongpress="handleSave"
+			></image>
+		</view>
+	</van-overlay>
+	<canvas
+	 class="result-img"
+	 style="width: 900px; height: 1200px;"
+	 canvas-id="myQrcode"
+	></canvas>
+	<van-toast id="van-toast" />
+	<van-dialog id="van-dialog" />
+</view>
+

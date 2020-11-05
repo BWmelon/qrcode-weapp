@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "custom-swiper": "../../components/customSwiper/customSwiper",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "qrcode-weapp",
+  "version": "1.0.0",
+  "description": "三合一收款码小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BWmelon/qrcode-weapp.git"
+  },
+  "author": "BWmelon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BWmelon/qrcode-weapp/issues"
+  },
+  "homepage": "https://github.com/BWmelon/qrcode-weapp#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.5.2"
+  }
+}
