@@ -46,13 +46,19 @@
 	</view>
 	<custom-swiper
 	 class="custom-swiper"
-	 imgUrls="{{carouselImgs}}"
+	 imgUrls="{{allCarouseImgs}}"
 	 bindgetModelName="bindgetModelName"
+	 unblockAd="{{unblockAd}}"
 	/>
 	<view class="btn-generate {{!params.qqUrl&&!params.wechatUrl&&!params.aliUrl ? '': 'active'}}" bindtap="generate">
 		<text class="iconfont icon-hecheng"></text>
 		Combine
 	</view>
+	<view bindtap="openDiy" class="btn-generate">
+		<text class="iconfont icon-meihua"></text>
+		二维码美化
+	</view>
+	<ad unit-id="adunit-574bf1cb5c40c84b"></ad>
 	<view class="tips">
 		<view class="tips-name">Tips</view>
 		<view class="tips-item">点击平台图标上传收款码，上传后可长按图标取消相应收款方式</view>

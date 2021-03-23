@@ -17,7 +17,7 @@
 			<image
 			 mode="aspectFill"
 			 src="{{item.url}}"
-			 class="slide-image {{currentIndex == index ? 'active' : 'common'}}"
+			 class="slide-image {{currentIndex==index?'active':'common'}} {{item.type==='art'?'art':''}} {{item.ad&&!unblockAd?'ad':''}}"
 			/>
 		</swiper-item>
 	</block>

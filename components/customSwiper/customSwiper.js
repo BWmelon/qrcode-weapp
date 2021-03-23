@@ -4,6 +4,7 @@ Component({
    */
   properties: {
     imgUrls: Array,
+    unblockAd: Boolean
   },
 
   /**
